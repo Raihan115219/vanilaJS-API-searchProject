@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  width: 100%;
+  height: 75vh;
+  background-image: url("./img/banner.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.banner .logo {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+}
+
+.content {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.contentTop {
+  text-align: center;
+}
+.contentTop h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.contentTop p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.content-bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+.searchSection {
+  margin: 25px 50px;
+}
+.searchSection input {
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.searchIcon {
+  position: absolute;
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+
+.searchButton {
+  width: 200px;
+  height: 55px;
+
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  color: #fff;
+  background-color: rgb(48, 171, 7);
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 30px;
+}
+.searchButton:hover {
+  background: transparent;
+  color: white;
+  border: 2px solid rgb(66, 222, 15);
+}
