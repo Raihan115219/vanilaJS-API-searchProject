@@ -19,7 +19,7 @@ function getResult() {
         data.hits.map((item, index) => {
           console.log(item);
           html += `
-         <div class="col-lg-3">
+         <div class="col-lg-4">
             <div class="card h-100 w-100 g-5 shadow-lg">
               <img
                 src=${item.webformatURL}
