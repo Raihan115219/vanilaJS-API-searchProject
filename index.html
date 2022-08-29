@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google.com</title>
+    <title>My Google com</title>
     <!-- fontaswoesome -->
     <script
       src="https://kit.fontawesome.com/d649539f63.js"
@@ -22,7 +22,9 @@
   <body>
     <header>
       <section id="hedding" class="banner">
-        <h1 class="logo">My-Google</h1>
+        <h1 class="logo">
+          <a href="" class="text-decoration-none text-white">My-Google</a>
+        </h1>
         <div class="content">
           <div class="contentTop px-5">
             <h1>Stunning free images & royalty</h1>
@@ -43,13 +45,21 @@
                   autocomplete="off"
                 />
               </div>
-              <button class="searchButton" id="searchButton">search</button>
+              <button class="searchButton" id="searchButton">Search</button>
             </div>
           </div>
         </div>
       </section>
     </header>
+
     <main>
+      <section
+        class="d-flex justify-content-evenly align-content-center mt-2 ms-5"
+      >
+        <button class="btn btn-success">Animal</button>
+        <button class="btn btn-warning">Food</button>
+        <button class="btn btn-info">Flower</button>
+      </section>
       <section class="container my-5">
         <div class="row gy-3" id="gallery"></div>
       </section>

@@ -7,11 +7,10 @@ searchBtn.addEventListener("click", getResult);
 
 function getResult() {
   gallery.innerHTML = `
-    <div class="text-center">
-          <div class="spinner-border text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
+    <div class="d-flex align-items-center fw-bold fs-1 text-danger">
+  <strong>Loading...</strong>
+  <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+</div>
   `;
   const searchTxt = document.getElementById("searchValue");
   let searchValue = searchTxt.value.trim();
@@ -25,7 +24,7 @@ function getResult() {
       let result = "";
       if (data.hits.length === 0) {
         searchTxt.value = "";
-        gallery.innerHTML = `<h1 class="text-danger text-center p-5">Not Found</h1>`;
+        gallery.innerHTML = `<h1 class="text-danger text-center fw-bold">Not Found</h1>`;
       } else {
         data.hits.forEach((item, index) => {
           result += `

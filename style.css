@@ -82,14 +82,12 @@
 .searchButton {
   width: 200px;
   height: 55px;
-
   border-radius: 10px;
   border: none;
   cursor: pointer;
   margin-top: 15px;
   color: #fff;
   background-color: rgb(48, 171, 7);
-  font-weight: bold;
   transition: 0.3s;
   text-align: center;
   font-size: 30px;
