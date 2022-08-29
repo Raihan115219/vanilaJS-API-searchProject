@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;600;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 .banner {
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   background-image: url("./img/banner.jpg");
   position: relative;
   background-size: cover;
@@ -44,9 +46,10 @@
   text-align: center;
 }
 .contentTop h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgb(98, 245, 110);
+  font-family: "Berkshire Swash", cursive;
 }
 .contentTop p {
   color: #fff;

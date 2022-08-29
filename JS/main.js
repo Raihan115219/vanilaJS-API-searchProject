@@ -17,16 +17,20 @@ function getResult() {
   let searchValue = searchTxt.value.trim();
   fetch(
     ` https://pixabay.com/api/?key=24357815-a18ef174ca31639bec4066a17&q=${
-      searchValue !== "" ? searchValue : "rose"
+      searchValue !== "" ? searchValue : "animal"
     }?&image_type=photo&per_page=30`
   )
     .then((response) => response.json())
     .then((data) => {
       let result = "";
-      data.hits.map((item, index) => {
-        result += `
+      if (data.hits.length === 0) {
+        searchTxt.value = "";
+        gallery.innerHTML = `<h1 class="text-danger text-center p-5">Not Found</h1>`;
+      } else {
+        data.hits.forEach((item, index) => {
+          result += `
          <div class="col-lg-4">
-            <div class="card h-100 w-100 g-5 shadow-lg" onclick="getDetails('${item.pageURL}')">
+            <div class="card h-100 w-100 g-5 shadow-lg cursor-pointer" onclick="getDetails('${item.pageURL}')">
               <img
                 src=${item.largeImageURL}
                 class="card-img-top img-fluid h-100 w-100"
@@ -38,9 +42,10 @@ function getResult() {
             </div>
           </div>
         `;
-        searchTxt.value = "";
-        gallery.innerHTML = result;
-      });
+          searchTxt.value = "";
+          gallery.innerHTML = result;
+        });
+      }
     });
 }
 
